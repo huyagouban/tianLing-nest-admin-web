@@ -25,7 +25,7 @@
 - 前端使用 `Vue3`、`Element-Plus`、`pinia` 等技术。
 - 演示地址：还在完善中。。。
 - 文档地址：还在完善中。。。
-
+- 配套后端地址："https://github.com/huyagouban/tianLing-nest-admin-api"
 
 ## 前端运行
 

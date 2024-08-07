@@ -4,8 +4,8 @@
             <!-- 左侧导航 -->
             <el-aside class="elAsideWidth">
                 <!-- 标题 -->
-                <div class="aside-title">
-                    <h1 v-if="!isCollapse">天凌管理系统</h1>
+                <div class="aside-title" >
+                    <img class="commonIconClass" style="margin-right: 12px;"  src="../../public/logo.png" alt=""><h1 v-if="!isCollapse">天凌管理系统</h1>
                 </div>
                 <menuList :isCollapse="isCollapse" class="aside-menu" />
             </el-aside>
@@ -50,6 +50,9 @@ const updateIsCollapse = () => {
         font-weight: bold;
         text-align: center;
         line-height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .aside-menu {

@@ -41,11 +41,11 @@
                 <p>
                     <el-button type="primary" icon="Cloudy" plain
                         @click="goTarget('https://gitee.com/y_project/RuoYi-Vue')">访问码云</el-button>
-                    <el-button  plain @click="goTarget('https://gitee.com/y_project/RuoYi-Vue')">
+                    <el-button plain @click="goTarget('https://github.com/huyagouban/tianLing-nest-admin-web')">
                         <template #icon>
                             <svgIcon iconClass="icon-test_1" className="icon"></svgIcon>
                         </template>
-                        访问码云</el-button>
+                        访问GitHub</el-button>
                     <!-- <el-button icon="HomeFilled" plain @click="goTarget('http://ruoyi.vip')">访问主页</el-button> -->
                 </p>
             </el-col>
