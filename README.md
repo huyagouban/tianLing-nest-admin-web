@@ -39,7 +39,10 @@ git clone https://github.com/huyagouban/tianLing-nest-admin-web.git
 pnpm install
 
 # 启动服务
-pnpm run dev
+pnpm serve 
+
+# 打包服务 
+pnpm build
 
 
 ```
