@@ -25,13 +25,11 @@ const props = defineProps({
     },
 });
 
-const emit = defineEmits(["update:modelValue"]);
+const emit = defineEmits(["modelValueChange"]);
 
 const modelValue = ref(props.modelValue);
 
 const editorRef = shallowRef(); // 编辑器实例，必须用 shallowRef
-
-
 
 const mode = ref("default"); // 编辑器模式
 const toolbarConfig = ref({
@@ -40,7 +38,6 @@ const toolbarConfig = ref({
         "insertImage",
         "insertVideo",
         "insertTable",
-
     ]
 }); // 工具条配置
 // 编辑器配置
@@ -58,6 +55,7 @@ const editorConfig = ref({
             },
         },
         uploadVideo:{
+            // 自定义视频上传
             async customUpload(file: any, insertFn: any) {
                 let formData = new FormData();
                 formData.append("file", file);
@@ -81,7 +79,7 @@ const handleCreated = (editor: IDomEditor) => {
 };
 
 function handleChange(editor: any) {
-    modelValue.value = editor.getHtml();
+    emit("modelValueChange", editor.getHtml());
 }
 
 
