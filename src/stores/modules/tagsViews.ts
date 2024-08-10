@@ -1,8 +1,5 @@
 import { defineStore } from "pinia";
 import type { tagsViewsType } from "@/type/common/tagsViews";
-import path from "path";
-import { de } from "element-plus/es/locales.mjs";
-
 export const useTagsViews = defineStore('tagsViews', () => {
     /**tags路由列表 */
     const tagsviewsList = ref<tagsViewsType[]>([]);

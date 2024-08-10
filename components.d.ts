@@ -61,14 +61,11 @@ declare module 'vue' {
     IEpQuestionFilled: typeof import('~icons/ep/question-filled')['default']
     IFrame: typeof import('./src/components/iFrame/index.vue')['default']
     ImportUpload: typeof import('./src/components/importUpload/importUpload.vue')['default']
-    MenuForm: typeof import('./src/views/system/menu/components/menuForm.vue')['default']
     Pagination: typeof import('./src/components/pagination/pagination.vue')['default']
-    RoleForm: typeof import('./src/views/system/role/components/roleForm.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SvgIcon: typeof import('./src/components/icons/svgIcon.vue')['default']
     SvgSelect: typeof import('./src/components/icons/svgSelect.vue')['default']
-    UserForm: typeof import('./src/views/system/user/components/userForm.vue')['default']
     WangEditor: typeof import('./src/components/wangEditor/index.vue')['default']
   }
   export interface ComponentCustomProperties {

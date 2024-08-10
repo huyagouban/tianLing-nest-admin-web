@@ -31,10 +31,8 @@
 
                 <el-form-item label="菜单权限" prop="menuRole">
                     <el-col :span="24">
-                        <el-checkbox v-model:model-value="unfoldAndFold" @change="unfoldAndFoldchange"
-                            label="展开/收起" />
-                        <el-checkbox v-model:model-value="unselectAll" @change="unselectAllChange"
-                            label="全选/全不选" />
+                        <el-checkbox v-model:model-value="unfoldAndFold" @change="unfoldAndFoldchange" label="展开/收起" />
+                        <el-checkbox v-model:model-value="unselectAll" @change="unselectAllChange" label="全选/全不选" />
                         <el-checkbox v-model:model-value="linkage" @change="linkageChange" label="父子联动" />
                     </el-col>
                     <el-col :span="24">
@@ -64,11 +62,9 @@
 import type { defaultProp, formType, } from "@/type/system/role"
 import type { menuOptionsType } from "@/type/system/menu"
 import type { ElTree, FormRules } from 'element-plus'
-import { submitRole, updateRole} from '@/api/system/role/role'
+import { submitRole, updateRole } from '@/api/system/role/role'
 import { confirm, msgSuccess } from "@/hooks/modal"
 import { getMenuList, } from '@/api/system/menu/menu'
-import { resolveConfig } from "vite"
-import { rejects } from "assert"
 const emit = defineEmits(['emitAddFormBtn'])
 const formRef = ref()
 const menuTreeRef = ref<typeof ElTree>()
@@ -92,12 +88,12 @@ const form = ref<formType>({
     roleSort: 0,
     status: "1",
 })
-  // 展开/收起
-const unfoldAndFold= ref(false)
-    // 全选/全不选
+// 展开/收起
+const unfoldAndFold = ref(false)
+// 全选/全不选
 const unselectAll = ref(false);
-    // 父子联动
-const linkage=ref(true);
+// 父子联动
+const linkage = ref(true);
 /**表单校验*/
 const rulesForm = ref<FormRules<formType>>({
     roleName: [
@@ -123,7 +119,7 @@ const submitForm = () => {
                         msgSuccess(res.message!)
                         closeDialog()
                     })
-                } else {                   
+                } else {
                     submitRole(form.value).then((res) => {
                         msgSuccess(res.message!)
                         closeDialog()
@@ -192,7 +188,7 @@ onMounted(async () => {
             menuIds?.forEach((menuId: number) => {
                 menuTreeRef.value?.setChecked(menuId, true, false)
             })
-            linkage.value=true
+            linkage.value = true
         })
     }
 })
