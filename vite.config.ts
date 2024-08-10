@@ -15,8 +15,9 @@ import viteCompression from 'vite-plugin-compression'
 export default defineConfig(({ mode, command }) => {
   const env=loadEnv(mode, process.cwd())
   const { VITE_APP_ENV } = env
+  // VITE_APP_ENV === 'production' ? '/tianLing-nest-admin-web/' :
   return {
-    base: VITE_APP_ENV === 'production' ? '/tianLing-nest-admin-web/' : './',
+    base:  './',
     plugins: [
       vue(),
       AutoImport({
