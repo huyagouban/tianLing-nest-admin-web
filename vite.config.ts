@@ -13,11 +13,11 @@ import viteCompression from 'vite-plugin-compression'
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode, command }) => {
-  const env=loadEnv(mode, process.cwd())
+  const env = loadEnv(mode, process.cwd())
   const { VITE_APP_ENV } = env
- 
+
   return {
-    base:  VITE_APP_ENV === 'production' ? '/tianLing-nest-admin-web/' :'./',
+    base: VITE_APP_ENV === 'production' ? '/tianLing-nest-admin-web/' : './',
     plugins: [
       vue(),
       AutoImport({
@@ -61,7 +61,13 @@ export default defineConfig(({ mode, command }) => {
           rewrite: path => path.replace(/^\/api/, ''),
         }
       }
-    }
+    },
+    build: {
+      chunkSizeWarningLimit: 1600
+    },
+    optimizeDeps: {
+      exclude: ['node_modules'],
+    },
   }
 
 })

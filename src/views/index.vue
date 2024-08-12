@@ -178,20 +178,20 @@ function goTarget(url: string) {
     ul {
         padding: 0;
         margin: 0;
-    }
-
-    font-family: "open sans",
-    "Helvetica Neue",
-    Helvetica,
-    Arial,
-    sans-serif;
-    font-size: 13px;
-    color: #676a6c;
-    overflow-x: hidden;
-
-    ul {
         list-style-type: none;
     }
+
+    & {
+        font-family: "open sans",
+            "Helvetica Neue",
+            Helvetica,
+            Arial,
+            sans-serif;
+        font-size: 13px;
+        color: #676a6c;
+        overflow-x: hidden;
+    }
+
 
     h4 {
         margin-top: 0px;

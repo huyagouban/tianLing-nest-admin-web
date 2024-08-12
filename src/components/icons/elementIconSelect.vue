@@ -22,6 +22,7 @@ const getIcon = computed(() => {
     let icons = { ...ElementPlusIconsVue }
     let arr = [];
     for (let i in icons) {
+        //@ts-ignore
         arr.push(i)
     }
     return arr
