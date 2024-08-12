@@ -1,1 +1,0 @@
-import{g as a,R as s,h as n,T as r,V as c,o as p}from"./index-CpodFpUQ.js";const i=a({__name:"index",setup(u){const e=r(),t=c(),o=()=>{t.replace({path:"/"+e.params.path})};return s(()=>{o()}),(_,m)=>(p(),n("div"))}});export{i as default};

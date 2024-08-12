@@ -1,1 +1,0 @@
-import{W as t}from"./index-CpodFpUQ.js";function o(){return t({url:"/profile",method:"get"})}function u(r){return t({url:"profile/updateUserInfo",method:"put",data:r})}function a(r){return t({url:"profile/UpdatePassword",method:"put",data:r})}function p(r){return t({url:"upload/uploadAvatar",method:"post",data:r})}export{p as a,u as b,o as g,a as u};

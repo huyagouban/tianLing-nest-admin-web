@@ -1,0 +1,1 @@
+import{b as o}from"./data-GFPIWC91.js";import{r as n,at as s}from"./index-gd7kCRgy.js";function m(...r){const t=n({});return r.forEach((a,u)=>{t.value[a]=[],o(a).then(e=>{t.value[a]=e.data})}),s(t.value)}export{m as u};
