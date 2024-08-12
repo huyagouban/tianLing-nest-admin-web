@@ -69,6 +69,7 @@ const submitForm = () => {
         if (valid) {
             confirm('是否确认提交？').then(() => {
                 updatePassword(form.value).then((res) => {
+                     //@ts-ignore
                     msgSuccess(res.message!)
                 })
             })

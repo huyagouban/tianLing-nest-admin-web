@@ -122,11 +122,13 @@ const submitForm = () => {
             confirm('是否确认提交？').then(() => {
                 if (form.value.dictDataId) {
                     updateDictData(form.value).then((res) => {
+                         //@ts-ignore
                         msgSuccess(res.message!)
                         closeDialog()
                     })
                 } else {
                     submitDictData(form.value).then((res) => {
+                         //@ts-ignore
                         msgSuccess(res.message!)
                         closeDialog()
                     })

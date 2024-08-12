@@ -118,6 +118,7 @@ const paginationCurrentChange = (currentPage: number) => {
 const quitOnline = (id: number) => {
     confirm('是否确认强制退出该用户？').then(() => {
         onlineLogout(id).then((res) => {
+             //@ts-ignore
             msgSuccess(res.message!)
             queryParmas()
         })

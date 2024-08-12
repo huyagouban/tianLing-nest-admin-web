@@ -77,11 +77,13 @@ const submitForm = () => {
             confirm('是否确认提交？').then(() => {
                 if (form.value.dictId) {
                     updateDict(form.value).then((res) => {
+                         //@ts-ignore
                         msgSuccess(res.message!)
                         closeDialog()
                     })
                 } else {
                     submitDict(form.value).then((res) => {
+                         //@ts-ignore
                         msgSuccess(res.message!)
                         closeDialog()
                     })

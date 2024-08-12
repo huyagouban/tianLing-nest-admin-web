@@ -198,6 +198,7 @@ const deleteForms = () => {
     }
     confirm('是否确认删除？').then(() => {
         deleteOperLog(ids.value.toString()).then((res) => {
+             //@ts-ignore
             msgSuccess(res.message!)
             queryParmas()
         })
@@ -208,6 +209,7 @@ const deleteForms = () => {
 const clearForms = () => {
     confirm('是否确认清空？').then(() => {
         operLogClear().then((res) => {
+             //@ts-ignore
             msgSuccess(res.message!)
             queryParmas()
         })

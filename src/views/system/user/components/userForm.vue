@@ -138,11 +138,13 @@ const submitForm = () => {
             confirm('是否确认提交？').then(() => {
                 if (form.value.userId) {
                     updateUserInfo(form.value).then((res) => {
+                         //@ts-ignore
                         msgSuccess(res.message!)
                         closeDialog()
                     })
                 } else {
                     submitUser(form.value).then((res) => {
+                         //@ts-ignore
                         msgSuccess(res.message!)
                         closeDialog()
                     })

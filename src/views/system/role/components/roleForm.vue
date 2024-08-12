@@ -116,11 +116,13 @@ const submitForm = () => {
                 form.value.menuIds = getMenuAllCheckedKeys()
                 if (form.value.roleId) {
                     updateRole(form.value).then((res) => {
+                         //@ts-ignore
                         msgSuccess(res.message!)
                         closeDialog()
                     })
                 } else {
                     submitRole(form.value).then((res) => {
+                         //@ts-ignore
                         msgSuccess(res.message!)
                         closeDialog()
                     })

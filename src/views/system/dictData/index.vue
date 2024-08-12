@@ -163,6 +163,7 @@ const deleteMenuForm = (id?: number) => {
     const dictIds = id || ids.value.toString()
     confirm('是否确认删除？').then(() => {
         deleteDictData(dictIds).then((res) => {
+             //@ts-ignore
             msgSuccess(res.message!)
             queryParmas()
         })
@@ -190,8 +191,10 @@ const statusChange = (item: dictDataType) => {
     }
     updateDictData(data).then(res => {
         if (res.status == 200) {
+             //@ts-ignore
             msgSuccess(res.message!)
         } else {
+             //@ts-ignore
             msgError(res.message!)
         }
         queryParmas()

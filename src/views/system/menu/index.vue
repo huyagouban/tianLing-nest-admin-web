@@ -145,6 +145,7 @@ const statusChange = async (id: number, status: '1' | '0') => {
     }
     updateMenuInfo(data).then(res => {
         if (res.status == 200) {
+             //@ts-ignore
             msgSuccess(res.message!)
         }
         queryParmas()

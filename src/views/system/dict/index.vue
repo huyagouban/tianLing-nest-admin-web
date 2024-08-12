@@ -165,6 +165,7 @@ const handleSelectionChange = (newSelection: any[]) => {
 const deleteMenuForm = (id: number) => {
     confirm('是否确认删除？').then(() => {
         deleteDict(id).then((res) => {
+            //@ts-ignore
             msgSuccess(res.message!)
             queryParmas()
         })
@@ -178,6 +179,7 @@ const deleteForms = () => {
     }
     confirm('是否确认删除？').then(() => {
         deleteDict(ids.value.toString()).then((res) => {
+            //@ts-ignore
             msgSuccess(res.message!)
             queryParmas()
         })
@@ -196,8 +198,10 @@ const statusChange = (id: number, status: statusEnum) => {
     }
     updateDict(data).then(res => {
         if (res.status == 200) {
+             //@ts-ignore
             msgSuccess(res.message!)
         } else {
+             //@ts-ignore
             msgError(res.message!)
         }
         queryParmas()
