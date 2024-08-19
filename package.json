@@ -5,11 +5,12 @@
   "author": "陆天凌",
   "private": true,
   "type": "module",
+  "homepage": "https://https://huyagouban.github.io/tianLing-nest-admin-web/",
   "scripts": {
     "serve": "vite --host ",
     "build": "vite build",
     "preview": "vite preview",
-    "build-only": "vite build",
+    "build-only": "vite build-only",
     "type-check": "vue-tsc --build --force"
   },
   "dependencies": {
