@@ -40,7 +40,7 @@
                 </p>
                 <p>
                     <el-button type="primary" icon="Cloudy" plain
-                        @click="goTarget('https://gitee.com/y_project/RuoYi-Vue')">访问码云</el-button>
+                        @click="goTarget('https://gitee.com/lutianling/tianLing-nest-admin-web')">访问码云</el-button>
                     <el-button plain @click="goTarget('https://github.com/huyagouban/tianLing-nest-admin-web')">
                         <template #icon>
                             <svgIcon iconClass="icon-test_1" className="icon"></svgIcon>
